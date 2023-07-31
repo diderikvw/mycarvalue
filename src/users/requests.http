@@ -1,0 +1,35 @@
+### Create a new user
+POST http://localhost:3001/auth/signup
+content-type: application/json
+
+{
+  "email": "diderik@example.org",
+  "password": "asdsad"
+}
+
+### Sign in a user
+POST http://localhost:3001/auth/signin
+content-type: application/json
+
+{
+  "email": "diderddik@example.org",
+  "password": "cvxvcx"
+}
+
+
+### Find a user with a given ID
+GET http://localhost:3001/auth/3
+
+### Find all users with a given email
+GET http://localhost:3001/auth?email=asdf@example.org
+
+### Delete a user with a given ID
+DELETE http://localhost:3001/auth/1
+
+### Update a user
+PATCH http://localhost:3001/auth/1
+content-type: application/json
+
+{
+  "password": "bbbbb"
+}

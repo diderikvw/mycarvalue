@@ -1,0 +1,32 @@
+# IDE / Editor configurations
+.vscode/
+!.vscode/extensions.json
+
+# Third-party code
+node_modules
+
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+.DS_Store
+npm-debug.log*
+
+# Dependency directory
+node_modules
+.config/configstore
+
+# Generated assets / caches
+.npm
+dist
+coverage
+swagger-spec.json
+
+#IDEs
+.idea
+
+# certificates
+cert/DigiCertGlobalRootCA.crt.pem

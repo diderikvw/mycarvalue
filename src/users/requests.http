@@ -3,7 +3,7 @@ POST http://localhost:3001/auth/signup
 content-type: application/json
 
 {
-  "email": "diderik@example.org",
+  "email": "diderik12@example.org",
   "password": "asdsad"
 }
 
@@ -12,9 +12,15 @@ POST http://localhost:3001/auth/signin
 content-type: application/json
 
 {
-  "email": "diderddik@example.org",
-  "password": "cvxvcx"
+  "email": "diderik12@example.org",
+  "password": "asdsad"
 }
+
+### Get the currently signed in user
+GET http://localhost:3001/auth/whoami
+
+### Sign out
+POST http://localhost:3001/auth/signout
 
 
 ### Find a user with a given ID
@@ -33,3 +39,9 @@ content-type: application/json
 {
   "password": "bbbbb"
 }
+
+### Set a color
+GET http://localhost:3001/auth/colors/red
+
+### Get the color
+GET http://localhost:3001/auth/colors

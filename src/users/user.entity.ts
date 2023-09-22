@@ -5,9 +5,11 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  OneToMany
 } from 'typeorm';
 // Not needed anymore because of the custom interceptor to shape outgoing data
 //import { Exclude } from 'class-transformer';
+import { Report } from '../reports/report.entity';
 
 // Leave off type of the class, so not UserEntity, by community convention only
 @Entity()
@@ -21,6 +23,9 @@ export class User {
   // Not needed anymore because of the custom interceptor to shape outgoing data
   //@Exclude()
   password: string;
+
+  @OneToMany(() => Report, (report) => report.user)
+  reports: Report[];
 
   @AfterInsert()
   logInsert() {
